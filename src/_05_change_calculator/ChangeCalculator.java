@@ -17,7 +17,7 @@ public class ChangeCalculator {
 		// Ask the user how many nickels they have
 		String S=JOptionPane.showInputDialog("What many nickels is you equal?");
 		// Convert their answer to an int using Integer.parseInt()
-	int nickels=	Integer.parseInt(S);
+		int nickels=Integer.parseInt(S);
 		// Ask the user how many dimes they have, and convert their answer
 		String A=JOptionPane.showInputDialog("What many dimes is you equal?");
 		int dimes=Integer.parseInt(A);
@@ -25,7 +25,15 @@ public class ChangeCalculator {
 		String B=JOptionPane.showInputDialog("What many quarters is you equal?");
 		int quarters=Integer.parseInt(B);
 		// Calculate how much money the user has and save it in a double variable 
-		
+		double ncents=5*nickels;
+		double dcents=10*dimes;
+		double qcents=25*quarters;
+		double totalcents=ncents+dcents+qcents;
+		if (totalcents>=100) {
+			totalcents= totalcents/100;
+			JOptionPane.showMessageDialog(null, "You have... $"+totalcents);
+		}
+		JOptionPane.showMessageDialog(null, "You have..."+totalcents);
 		// Tell the user how much money they have
 
 	}
