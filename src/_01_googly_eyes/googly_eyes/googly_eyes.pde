@@ -7,5 +7,11 @@ void setup(){
 
 
 void draw(){
+ fill(#FFFFFF);
+  ellipse(325, 230, 200, 70);
+  ellipse(725, 250, 200, 70);
   
+  fill(0, 0, 0);
+  ellipse(325, 230, 25, 25);
+  ellipse(725, 250, 25, 25);
 }
